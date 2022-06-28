@@ -1,0 +1,27 @@
+Evolution of different organisms:								
+Consider the following 2 player game - 
+Each player starts with 0 coins and play as per the below rules (Assume having negative coins is allowed) - 
+
+1. In every round they have to pick one of 2 choices, either to cooperate or to cheat. Note that the players don’t know each other's choices.
+2. If both players simultaneously choose to cooperate then they both win 2 coins each.
+3. If both players simultaneously choose to cheat, they both come out empty-handed.
+4. If one player chooses to cooperate while the other cheats then the cheating player wins 3 coins and the cooperating player loses 1 coin.
+5. The players play 10 such rounds with each other.
+
+Now consider 3 types of players. Let's name them A, B and C. They play as per the following algorithm 
+1. Player A always cheats.
+2. Player B always cooperates.
+3. Player C cooperates in the first round, then mimics whatever move was played by his opponent in the previous round.
+
+Type X vs Type Y:								
+Consider all possible combinations of X and Y and see which Type performs better.
+Summarize your findings.
+	
+Consider a society of 25 people divided into x people of type A, y of type B and z of type C. We consider the following process as “Evolution” for our scenario.
+
+1. Every player plays a game against every other player (players of the same type also play against each other) and we tally up the total coins gained by each player in these games.
+2. After everyone is done playing, the 5 players with the least coins gained get eliminated. If there are more than 5 players then 5 of them are chosen at random.
+3. The 5 top players are chosen and cloned so there are again exactly 25 total players, cloning preserves type.
+4. The process repeats again.
+
+This series of games repeats continuously until only one type of player remains. If only A remains then we say that A has dominated.
