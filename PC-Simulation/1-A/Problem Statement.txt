@@ -21,4 +21,4 @@ If there is a food particle within sight then move towards it in the least numbe
 After the organism moves to the cell with entry 2, it eats the food particle and the matrix entry changes from 2 to 1 while the particle is on the cell and to 0 once the particle leaves that cell.
 This process terminates after the organism has made 10000 moves. 
 
-Q) Append the position of the organism after every iteration into a list. Your goal is to write an algorithm / pseudo-code that makes this list for a given input matrix. You need not output the list.
+Q) Append the position of the organism after every iteration into a list.
