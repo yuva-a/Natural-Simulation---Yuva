@@ -1,0 +1,24 @@
+Simulating a single organism ecosystem						
+
+Consider the following scenario: 
+A unicellular organism is confined in a 2D square space made of n2 cells. This is represented by a n ⨯ n matrix. There are k food sources scattered around the space.
+0 means the space is empty
+1 means the organism is at that cell
+2 means there is a food source at that cell
+You are given an n⨯n matrix with entries 0, 1 and 2 as input. 
+In other words we have exactly: 
+one “1 entry”
+k “2 entries” 
+rest (n2 - k - 1) “0 entries” in the matrix. 
+
+Let this unicellular organism have a visual radius of r. i.e. it can see everything within a Manhattan Distance r from it but is blind to any cell outside this range.
+This unicellular organism starts initially at the cell ([n/2], [n/2]), where [] represents floor function. 
+
+One iteration consists of one horizontal/vertical (not diagonal) movement of the organism (Note that the organism cannot move outside the borders of the matrix).
+Also let this organism move according to the following rules -
+If there is no food particle within the range of vision of the organism then move randomly according to the above iteration rules [Left, Right, Up, Down]. 
+If there is a food particle within sight then move towards it in the least number of iterations possible. If there are more than one then move towards any of the closest ones.
+After the organism moves to the cell with entry 2, it eats the food particle and the matrix entry changes from 2 to 1 while the particle is on the cell and to 0 once the particle leaves that cell.
+This process terminates after the organism has made 10000 moves. 
+
+Q) Append the position of the organism after every iteration into a list. Your goal is to write an algorithm / pseudo-code that makes this list for a given input matrix. You need not output the list.
